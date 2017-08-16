@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe Employee, type: :model do
   subject { described_class.new }
 
+  context 'associations' do
+    it { is_expected.to belong_to(:team) }
+  end
+
   context 'validation' do
     subject { build_stubbed(:employee) }
 
