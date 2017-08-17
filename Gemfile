@@ -26,6 +26,7 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'jsonapi-resources'
 gem 'jwt'
 
 group :development, :test do
@@ -50,6 +51,7 @@ group :test do
   gem 'factory_girl_rails', require: false
   gem 'faker', require: false
   gem 'shoulda-matchers', require: false
+  gem 'airborne', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

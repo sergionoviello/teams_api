@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Headers
 
-* Ruby version
+```
+[{"key":"Accept","value":"application/vnd.api+json"}]
+[{"key":"Content-type","value":"application/vnd.api+json"}]
+[{"key":"Authorization","value":eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MDMwODgzOTF9.M_IlivzJCrEkiSv9K8eNcGs535Zw2EL5doLM2GnOG2I"}]
+```
 
-* System dependencies
+## /api/v1/teams
 
-* Configuration
+```
+{"data": {"type":"teams", "attributes":{"name": "Pegasus", "description": "delivery team"}}}
+```
 
-* Database creation
+## /api/v1/projects
 
-* Database initialization
+```
+{"data": {"type":"projects", "attributes":{"title": "project title", "description": "description"}}}
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
