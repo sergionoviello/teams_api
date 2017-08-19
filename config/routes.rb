@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   post 'authenticate', to: 'auth#authenticate'
 
-  get 'home', to: 'home#index'
+  namespace :api do
+    namespace :v1 do
+      jsonapi_resources :teams
+      jsonapi_resources :projects
+    end
+  end
 end

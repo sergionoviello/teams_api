@@ -1,5 +1,7 @@
 # ApplicationController
 class ApplicationController < ActionController::API
+  include JSONAPI::ActsAsResourceController
+
   before_action :auth_request
 
   private

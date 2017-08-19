@@ -1,24 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Headers
 
-* Ruby version
+```
+[{"key":"Accept","value":"application/vnd.api+json"}]
+[{"key":"Content-type","value":"application/vnd.api+json"}]
+[{"key":"Authorization","value":eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MDMwODgzOTF9.M_IlivzJCrEkiSv9K8eNcGs535Zw2EL5doLM2GnOG2I"}]
+```
 
-* System dependencies
+## /api/v1/teams
 
-* Configuration
+```
+{"data": {"type":"teams", "attributes":{"name": "Pegasus", "description": "delivery team"}}}
+```
 
-* Database creation
+response 
 
-* Database initialization
+```
+{
+    "data": {
+        "id": "4",
+        "type": "teams",
+        "links": {
+            "self": "http://localhost:3000/api/v1/teams/4"
+        },
+        "attributes": {
+            "name": "Mercury",
+            "description": "moments team"
+        },
+        "relationships": {
+            "projects": {
+                "links": {
+                    "self": "http://localhost:3000/api/v1/teams/4/relationships/projects",
+                    "related": "http://localhost:3000/api/v1/teams/4/projects"
+                }
+            }
+        }
+    }
+}
+```
 
-* How to run the test suite
+## /api/v1/projects
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+{"data": {"type":"projects", "relationships":  {"team": {"data": {"type": "teams", "id": 3}}},  "attributes":{"title": "project title 3", "description": "description"}}}
+```
 
-* Deployment instructions
 
-* ...
