@@ -52,6 +52,9 @@ group :test do
   gem 'faker', require: false
   gem 'jsonapi-resources-matchers', require: false
   gem 'shoulda-matchers', require: false
+
+  gem 'vcr', require: false                       # RSPEC Record HTTP
+  gem 'webmock', require: false                   # Mock web requests
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
