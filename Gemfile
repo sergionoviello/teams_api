@@ -50,8 +50,8 @@ group :test do
   gem 'factory_girl', require: false
   gem 'factory_girl_rails', require: false
   gem 'faker', require: false
+  gem 'jsonapi-resources-matchers', require: false
   gem 'shoulda-matchers', require: false
-  gem 'airborne', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
