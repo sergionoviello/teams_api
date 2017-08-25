@@ -29,5 +29,13 @@ RSpec.describe '/api/v1/teams/:id', type: :request do
       it { expect(Team.count).to eq(1) }
       it { expect(response).to have_http_status(:unprocessable_entity) }
     end
+
+    context 'when resource does not exist' do
+      before do
+        delete "/api/v1/teams/-1", headers: header
+      end
+
+      it { expect(response).to have_http_status(:not_found) }
+    end
   end
 end
