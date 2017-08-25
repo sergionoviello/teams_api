@@ -38,16 +38,12 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
     ast (2.3.0)
     bcrypt (3.1.11)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
     database_cleaner (1.6.1)
     diff-lcs (1.3)
     erubi (1.6.1)
@@ -58,12 +54,9 @@ GEM
       railties (>= 3.0.0)
     faker (1.8.4)
       i18n (~> 0.5)
-    faraday (0.13.1)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    hashdiff (0.3.4)
     i18n (0.8.6)
     jsonapi-resources (0.9.0)
       activerecord (>= 4.1)
@@ -86,7 +79,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.3)
-    multipart-post (2.0.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -94,7 +86,6 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     powerpack (0.1.1)
-    public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -156,7 +147,6 @@ GEM
       rubocop (>= 0.42.0)
     ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
-    safe_yaml (1.0.4)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     spring (2.0.2)
@@ -177,11 +167,6 @@ GEM
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
     unicode-display_width (1.3.0)
-    vcr (3.0.3)
-    webmock (3.0.1)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
-      hashdiff
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -196,7 +181,6 @@ DEPENDENCIES
   factory_girl
   factory_girl_rails
   faker
-  faraday
   jsonapi-resources
   jsonapi-resources-matchers
   jwt
@@ -211,8 +195,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tzinfo-data
-  vcr
-  webmock
 
 BUNDLED WITH
    1.15.3

@@ -32,10 +32,31 @@ RSpec.describe '/api/v1/teams/:id', type: :request do
 
     context 'when resource does not exist' do
       before do
-        delete "/api/v1/teams/-1", headers: header
+        delete '/api/v1/teams/-1', headers: header
       end
 
       it { expect(response).to have_http_status(:not_found) }
     end
+  end
+
+  describe '/api/v1/teams/:id/relationships/projects' do
+    let(:team) { create(:team) }
+    let(:project) { create(:project, team: team) }
+    let!(:other_project) { create(:project, team: team) }
+
+    let(:body) do
+      {
+        data: [
+          { type: 'projects', id: project.id }
+        ]
+      }
+    end
+
+    before do
+      delete "/api/v1/teams/#{team.id}/relationships/projects", headers: header
+    end
+
+    it { expect(team.projects.count).to eq(1) }
+    it { expect(team.projects.last.title).to eq(other_project.title) }
   end
 end

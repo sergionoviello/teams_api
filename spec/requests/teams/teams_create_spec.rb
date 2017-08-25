@@ -42,4 +42,24 @@ RSpec.describe '/api/v1/teams', type: :request do
       it_behaves_like 'bad request'
     end
   end
+
+  describe '/api/v1/teams/:id/relationships/projects' do
+    let(:team) { create(:team) }
+    let(:another_team) { create(:team) }
+    let(:project) { create(:project, team: another_team) }
+
+    let(:body) do
+      {
+        data: [
+          { type: 'projects', id: project.id }
+        ]
+      }
+    end
+
+    before do
+      post "/api/v1/teams/#{team.id}/relationships/projects", params: body.to_json, headers: header
+    end
+
+    it { expect(team.projects.count).to eq(1) }
+  end
 end

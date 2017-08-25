@@ -51,4 +51,23 @@ RSpec.describe '/api/v1/teams/:id', type: :request do
       it_behaves_like 'bad request'
     end
   end
+
+  describe 'PATCH /teams/:id/relationships/projects' do
+    before do
+      patch "/api/v1/teams/#{team.id}/relationships/projects", params: body.to_json, headers: header
+    end
+
+    context 'when projects are removed' do
+      let(:team) { create(:team) }
+      let(:project) { create(:project, team: team) }
+
+      let(:body) do
+        {
+          data: []
+        }
+      end
+
+      it { expect(team.projects.count).to eq(0) }
+    end
+  end
 end
