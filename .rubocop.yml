@@ -7,3 +7,4 @@ AllCops:
     - '**/Gemfile'
   Exclude:
     - db/schema.rb
+    - 'spec/rails_helper.rb'

@@ -7,6 +7,8 @@
 [{"key":"Accept","value":"application/vnd.api+json"}]
 [{"key":"Content-type","value":"application/vnd.api+json"}]
 [{"key":"Authorization","value":eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MDMwODgzOTF9.M_IlivzJCrEkiSv9K8eNcGs535Zw2EL5doLM2GnOG2I"}]
+
+{"email": "example@mail.com", "password": "123123123"}
 ```
 
 ## /api/v1/teams
