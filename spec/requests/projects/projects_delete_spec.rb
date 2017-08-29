@@ -4,7 +4,7 @@ RSpec.describe '/api/v1/projects/:id', type: :request do
   include_context 'client authenticated'
 
   describe 'DELETE /api/v1/projects/:id' do
-    context 'when project has no prjects' do
+    context 'when team has 1 project' do
       let(:team) { create(:team) }
       let(:project) { create(:project, team: team) }
 
@@ -14,7 +14,7 @@ RSpec.describe '/api/v1/projects/:id', type: :request do
 
       it { expect(response).to have_http_status(:no_content) }
 
-      it 'updates the name' do
+      it 'deletes the project' do
         expect(Project.count).to eq(0)
       end
     end
